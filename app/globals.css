@@ -22,24 +22,30 @@ a {
    HERO
 ========================= */
 
+/* =========================
+   HEADER + HERO — FIGMA 1440
+========================= */
+
 .hero {
-  background: #fff;
-  min-height: 750px;
+  height: 750px;
+  background: #ffffff;
+  color: #080808;
+  overflow: hidden;
 }
 
 .header {
   width: 1240px;
-  max-width: calc(100% - 60px);
-  height: 110px;
+  height: 100px;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 220px 1fr 180px;
+  grid-template-columns: 250px 1fr 190px;
   align-items: center;
 }
 
 .headerLogo {
-  width: 190px;
+  display: block;
+  width: 200px;
   height: auto;
 }
 
@@ -47,80 +53,92 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 45px;
 
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
+  line-height: 1;
   font-weight: 800;
 }
 
 .nav a {
-  transition: 0.2s ease;
-}
-
-.nav a:hover {
-  color: #ef372d;
+  color: #0b0b0b;
 }
 
 .quoteButton {
   justify-self: end;
 
-  background: #ef372d;
-  color: #fff;
+  min-width: 184px;
+  height: 42px;
 
-  padding: 15px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ef382e;
+  color: #ffffff;
+
   border-radius: 12px;
 
   font-size: 14px;
-  font-weight: 800;
-}
-
-.heroInner {
-  width: 1240px;
-  max-width: calc(100% - 60px);
-  height: 640px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 42% 58%;
-  align-items: center;
-}
-
-.heroText {
-  align-self: center;
-  padding-bottom: 40px;
-}
-
-.hero h1 {
-  margin: 0;
-
-  font-family: Impact, "Arial Narrow", sans-serif;
-  font-size: 92px;
-  font-weight: 900;
-  line-height: 0.88;
-  letter-spacing: 1px;
-
-  color: #050505;
-}
-
-.hero h1 span {
-  color: #ef372d;
-}
-
-.location {
-  margin: 10px 0 0;
-
-  color: #ef372d;
-  font-size: 17px;
   line-height: 1;
   font-weight: 800;
 }
 
-.description {
-  margin: 10px 0 0;
+.heroInner {
+  position: relative;
+
+  width: 1240px;
+  height: 650px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE */
+
+.heroText {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  top: 88px;
+
+  width: 490px;
+}
+
+.heroTitle {
+  margin: 0;
+
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 88px;
+  line-height: 0.89;
+  font-weight: 900;
+  letter-spacing: 0;
+
+  color: #050505;
+}
+
+.heroTitle span {
+  color: #ef382e;
+}
+
+.location {
+  margin: 8px 0 0;
 
   font-size: 17px;
-  line-height: 1.25;
+  line-height: 1;
+  font-weight: 800;
+
+  color: #ef382e;
+}
+
+.description {
+  margin: 11px 0 0;
+
+  font-size: 17px;
+  line-height: 1.18;
   font-weight: 700;
+
+  color: #111111;
 }
 
 .rating {
@@ -134,73 +152,145 @@ a {
 }
 
 .stars {
-  color: #dba928;
+  display: block;
+
+  color: #daa92c;
+
   font-size: 31px;
-  letter-spacing: 2px;
   line-height: 1;
+  letter-spacing: 2px;
 }
 
 .score {
+  color: #111111;
+
   font-size: 31px;
+  line-height: 1;
   font-weight: 900;
 }
 
 .trusted {
-  margin-top: 8px;
+  margin: 9px 0 0;
+
+  color: #111111;
 
   font-size: 17px;
+  line-height: 1;
   font-weight: 700;
 }
 
-.trusted strong {
-  color: #ef372d;
+.trusted span {
+  color: #ef382e;
 }
 
 .actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 15px;
 
-  margin-top: 31px;
+  margin-top: 29px;
 }
 
 .callButton {
-  display: inline-flex;
+  width: 135px;
+  height: 42px;
+
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  min-width: 134px;
-  height: 44px;
-
-  background: #ef372d;
-  color: #fff;
+  background: #ef382e;
+  color: #ffffff;
 
   border-radius: 11px;
 
   font-size: 16px;
+  line-height: 1;
   font-weight: 900;
 }
 
 .phone {
+  color: #111111;
+
   font-size: 21px;
+  line-height: 1;
   font-weight: 900;
 }
 
+/* TRUCK */
+
 .heroTruck {
-  height: 100%;
-  position: relative;
+  position: absolute;
+
+  left: 500px;
+  top: 106px;
+
+  width: 740px;
+  height: 470px;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 
 .truck {
+  display: block;
+
   width: 720px;
   max-width: none;
   height: auto;
+}
 
-  transform: translate(30px, 20px);
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 1279px) {
+  .header,
+  .heroInner {
+    width: calc(100% - 64px);
+  }
+
+  .truck {
+    width: 650px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+  }
+
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .heroInner {
+    height: auto;
+    padding: 65px 0 0;
+  }
+
+  .heroText {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+
+  .heroTruck {
+    position: relative;
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    height: 430px;
+
+    justify-content: center;
+    margin-top: 30px;
+  }
 }
 
 /* =========================
