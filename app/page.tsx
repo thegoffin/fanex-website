@@ -84,67 +84,67 @@ export default function Home() {
   return (
     <main className={`${inter.className} homeRoot`}>
       <div className="desktopHome">
-        <header className="header">
-          <div className="navContainer">
-            <div className="brandLogoWrap">
-              <img src={imgFanexLogo} alt="Fanex logo" className="brandLogo" />
+        <header className="homeHeader">
+          <div className="homeHeaderNavContainer">
+            <div className="homeHeaderLogoWrap">
+              <img src={imgFanexLogo} alt="Fanex logo" className="homeHeaderLogo" />
             </div>
 
-            <nav className="mainNav" aria-label="Main navigation">
-              <a href="#services">SERVICES</a>
-              <a href="#locations">LOCATIONS</a>
-              <a href="#about">ABOUT US</a>
-              <a href="#reviews">REVIEWS</a>
+            <nav className="homeHeaderNav" aria-label="Main navigation">
+              <a href="#services" className="homeHeaderNavServices">SERVICES</a>
+              <a href="#locations" className="homeHeaderNavLocations">LOCATIONS</a>
+              <a href="#about" className="homeHeaderNavAbout">ABOUT US</a>
+              <a href="#reviews" className="homeHeaderNavReviews">REVIEWS</a>
             </nav>
 
-            <div className="headerActions">
-              <a href="#quote" className="quoteButton">
-                GET A QUOTE
+            <div className="homeHeaderActions">
+              <a href="#quote" className="homeHeaderQuoteButton">
+                <span className="homeHeaderQuoteText">GET A QUOTE</span>
               </a>
             </div>
           </div>
         </header>
 
-        <section className="hero" aria-label="Hero section">
-          <div className="heroContainer">
-            <div className="heroContent">
-              <h1 className={`${antonio.className} heroTitle`}>
+        <section className="homeHero" aria-label="Hero section">
+          <div className="homeHeroContainer">
+            <div className="homeHeroContent">
+              <h1 className={`${antonio.className} homeHeroTitle`}>
                 MOVING
                 <br />
                 DONE
                 <br />
                 <span>RIGHT</span>
-                <span className="heroPeriod">.</span>
+                <span className="homeHeroPeriod">.</span>
               </h1>
 
-              <div className="heroLocation">SACRAMENTO MOVING COMPANY</div>
+              <div className="homeHeroLocation">SACRAMENTO MOVING COMPANY</div>
 
-              <p className="heroDescription">
+              <p className="homeHeroDescription">
                 Reliable moving services in Sacramento and beyond. On time, every time.
               </p>
 
-              <div className="trustRating">
-                <div className="ratingLine">
-                  <span className="stars">★★★★★</span>
-                  <span className="ratingScore">4.9/5</span>
+              <div className="homeHeroTrustRating">
+                <div className="homeHeroRatingLine">
+                  <span className="homeHeroStars">★★★★★</span>
+                  <span className="homeHeroRatingScore">4.9/5</span>
                 </div>
-                <div className="ratingText">
+                <div className="homeHeroRatingText">
                   Trusted by <span>250+</span> customers
                 </div>
               </div>
 
-              <div className="primaryCta">
-                <a href="tel:+19168609311" className="callButton">
+              <div className="homeHeroPrimaryCta">
+                <a href="tel:+19168609311" className="homeHeroCallButton">
                   CALL NOW
                 </a>
-                <a href="tel:+19168609311" className="phoneNumber">
+                <a href="tel:+19168609311" className="homeHeroPhoneNumber">
                   (916) 860-9311
                 </a>
               </div>
             </div>
 
-            <div className="heroVisual">
-              <img src={imgBoxTruckRed} alt="Box truck" className="boxTruck" />
+            <div className="homeHeroVisual">
+              <img src={imgBoxTruckRed} alt="Box truck" className="homeHeroTruck" />
             </div>
           </div>
         </section>

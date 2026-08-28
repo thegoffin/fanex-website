@@ -40,7 +40,7 @@ a {
   background: #ffffff;
 }
 
-.header {
+.homeHeader {
   position: absolute;
   left: 0;
   top: 0;
@@ -49,7 +49,7 @@ a {
   background: #ffffff;
 }
 
-.navContainer {
+.homeHeaderNavContainer {
   position: absolute;
   left: 100px;
   top: 0;
@@ -61,23 +61,24 @@ a {
   background: #ffffff;
 }
 
-.brandLogoWrap {
+.homeHeaderLogoWrap {
   width: 194.883px;
   height: 40px;
   display: flex;
   align-items: center;
 }
 
-.brandLogo {
+.homeHeaderLogo {
   width: 194.883px;
   height: 40px;
   object-fit: contain;
 }
 
-.mainNav {
+.homeHeaderNav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  width: 529px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 600;
@@ -86,13 +87,30 @@ a {
   white-space: nowrap;
 }
 
-.mainNav a {
+.homeHeaderNav a {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
+  flex: 0 0 auto;
 }
 
-.headerActions {
+.homeHeaderNavServices {
+  width: 98px;
+}
+
+.homeHeaderNavLocations {
+  width: 116px;
+}
+
+.homeHeaderNavAbout {
+  width: 104px;
+}
+
+.homeHeaderNavReviews {
+  width: 91px;
+}
+
+.homeHeaderActions {
   width: 222px;
   height: 88px;
   display: flex;
@@ -100,7 +118,7 @@ a {
   justify-content: center;
 }
 
-.quoteButton {
+.homeHeaderQuoteButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +133,15 @@ a {
   text-transform: uppercase;
 }
 
-.hero {
+.homeHeaderQuoteText {
+  width: 136px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeHero {
   position: absolute;
   left: 0;
   top: 128px;
@@ -124,7 +150,7 @@ a {
   background: #ffffff;
 }
 
-.heroContainer {
+.homeHeroContainer {
   position: absolute;
   left: 100px;
   top: 0;
@@ -134,7 +160,7 @@ a {
   gap: 10px;
 }
 
-.heroContent {
+.homeHeroContent {
   width: 500px;
   height: 620px;
   display: flex;
@@ -142,7 +168,7 @@ a {
   align-items: flex-start;
 }
 
-.heroTitle {
+.homeHeroTitle {
   margin: 0;
   width: 398px;
   height: 304px;
@@ -154,15 +180,19 @@ a {
   text-transform: uppercase;
 }
 
-.heroTitle span {
+.homeHeroTitle > span {
+  letter-spacing: 0.8px;
+}
+
+.homeHeroTitle span {
   color: #e32725;
 }
 
-.heroPeriod {
+.homeHeroPeriod {
   color: #000000 !important;
 }
 
-.heroLocation {
+.homeHeroLocation {
   margin-top: 10px;
   width: 338px;
   height: 24px;
@@ -171,9 +201,10 @@ a {
   font-weight: 600;
   color: #e32725;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.heroDescription {
+.homeHeroDescription {
   margin: 10px 0 0;
   width: 500px;
   height: 48px;
@@ -183,7 +214,7 @@ a {
   color: #111111;
 }
 
-.trustRating {
+.homeHeroTrustRating {
   margin-top: 10px;
   width: 323px;
   height: 108px;
@@ -192,7 +223,7 @@ a {
   justify-content: center;
 }
 
-.ratingLine {
+.homeHeroRatingLine {
   display: flex;
   align-items: center;
   gap: 0;
@@ -201,32 +232,32 @@ a {
   color: #111111;
 }
 
-.stars {
+.homeHeroStars {
   color: #d4af37;
   font-size: 40px;
   letter-spacing: 0;
   line-height: 40px;
 }
 
-.ratingScore {
+.homeHeroRatingScore {
   margin-left: 6px;
   font-size: 40px;
   line-height: 40px;
   color: #111111;
 }
 
-.ratingText {
+.homeHeroRatingText {
   margin-top: 0;
   font-size: 20px;
   line-height: 40px;
   color: #111111;
 }
 
-.ratingText span {
+.homeHeroRatingText span {
   color: #e32725;
 }
 
-.primaryCta {
+.homeHeroPrimaryCta {
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -235,7 +266,7 @@ a {
   height: 61px;
 }
 
-.callButton {
+.homeHeroCallButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -250,20 +281,24 @@ a {
   text-transform: uppercase;
 }
 
-.phoneNumber {
+.homeHeroPhoneNumber {
+  width: 184px;
+  height: 10px;
+  display: inline-flex;
+  justify-content: flex-end;
   font-size: 24px;
   line-height: 10px;
   font-weight: 700;
   color: #111111;
 }
 
-.heroVisual {
+.homeHeroVisual {
   position: relative;
   width: 730px;
   height: 620px;
 }
 
-.boxTruck {
+.homeHeroTruck {
   position: absolute;
   left: 0;
   top: 67px;
