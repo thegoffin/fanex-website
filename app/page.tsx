@@ -6,7 +6,7 @@ export default function Home() {
       <section className="hero">
         <header className="header">
           <Image
-            src="/fanex-logo.png"
+            src="/fanex-logo-black.svg"
             alt="FANEX Moving"
             width={190}
             height={60}
