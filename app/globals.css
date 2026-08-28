@@ -13,7 +13,13 @@ html {
 }
 
 body {
-  background: #000;
+  margin: 0;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
@@ -21,510 +27,605 @@ a {
   text-decoration: none;
 }
 
-/*
-==================================================
-DESKTOP FIGMA FRAME
-==================================================
-*/
-
-.desktopPage {
-  width: 1440px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/*
-==================================================
-HERO
-==================================================
-*/
-
-.hero {
-  position: relative;
-
-  width: 100%;
-  height: 750px;
-
+.homeRoot {
   background: #ffffff;
-  color: #080808;
-
-  overflow: hidden;
+  color: #111111;
 }
 
-/*
----------------- HEADER ----------------
-*/
+.desktopHome {
+  position: relative;
+  width: 1440px;
+  height: 5000px;
+  margin: 0 auto;
+  background: #ffffff;
+}
 
 .header {
-  position: relative;
-
-  width: 100%;
-  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 88px;
+  background: #ffffff;
 }
 
-/* Figma: ~x 100 */
-
-.headerLogo {
+.navContainer {
   position: absolute;
-
   left: 100px;
-  top: 21px;
-
-  width: 195px;
-  height: auto;
-}
-
-/* centered navigation */
-
-.nav {
-  position: absolute;
-
-  left: 442px;
-  top: 34px;
-
+  top: 0;
+  width: 1240px;
+  height: 88px;
   display: flex;
   align-items: center;
-  gap: 45px;
+  justify-content: space-between;
+  background: #ffffff;
+}
 
+.brandLogoWrap {
+  width: 194.883px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.brandLogo {
+  width: 194.883px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #111111;
   white-space: nowrap;
-
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 700;
-
-  color: #0a0a0a;
 }
 
-.nav a {
-  transition: opacity 0.15s ease;
+.mainNav a {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
 }
 
-.nav a:hover {
-  opacity: 0.55;
+.headerActions {
+  width: 222px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* Figma: ~x 1135 */
 
 .quoteButton {
-  position: absolute;
-
-  right: 100px;
-  top: 22px;
-
-  width: 184px;
-  height: 42px;
-
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-
-  background: #ef392e;
+  justify-content: center;
+  width: 184px;
+  height: 40px;
+  background: #ee3725;
   color: #ffffff;
-
-  border-radius: 11px;
-
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 800;
+  border-radius: 12px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-/*
----------------- HERO CANVAS ----------------
-*/
-
-.heroCanvas {
-  position: relative;
-
-  width: 100%;
-  height: 650px;
-}
-
-/*
-Figma:
-x ≈ 100
-y ≈ 144 from top of frame
-*/
-
-.heroCopy {
+.hero {
   position: absolute;
-
-  left: 100px;
-  top: 44px;
-
-  width: 470px;
-
-  z-index: 2;
+  left: 0;
+  top: 128px;
+  width: 1440px;
+  height: 620px;
+  background: #ffffff;
 }
 
-/*
-TITLE
-*/
+.heroContainer {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  width: 1240px;
+  height: 620px;
+  display: flex;
+  gap: 10px;
+}
+
+.heroContent {
+  width: 500px;
+  height: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .heroTitle {
   margin: 0;
-
-  color: #050505;
-
-  font-size: 88px;
-  line-height: 0.91;
-  font-weight: 400;
-
-  letter-spacing: -1px;
+  width: 398px;
+  height: 304px;
+  color: #000000;
+  font-size: 96px;
+  line-height: 100px;
+  font-weight: 700;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
 }
 
 .heroTitle span {
-  color: #ef392e;
+  color: #e32725;
 }
 
-.heroTitle b {
-  color: #050505;
-  font-weight: inherit;
+.heroPeriod {
+  color: #000000 !important;
 }
 
-/*
-LOCATION
-*/
-
-.location {
-  margin-top: 8px;
-
-  color: #ef392e;
-
-  font-size: 17px;
-  line-height: 1;
-  font-weight: 800;
+.heroLocation {
+  margin-top: 10px;
+  width: 338px;
+  height: 24px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #e32725;
+  text-transform: uppercase;
 }
 
-/*
-DESCRIPTION
-*/
-
-.description {
-  margin: 11px 0 0;
-
+.heroDescription {
+  margin: 10px 0 0;
+  width: 500px;
+  height: 48px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
   color: #111111;
-
-  font-size: 17px;
-  line-height: 1.22;
-  font-weight: 650;
 }
 
-/*
-RATING
-*/
+.trustRating {
+  margin-top: 10px;
+  width: 323px;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .ratingLine {
   display: flex;
   align-items: center;
-
-  gap: 19px;
-
-  margin-top: 21px;
+  gap: 0;
+  height: 40px;
+  font-weight: 600;
+  color: #111111;
 }
 
 .stars {
-  color: #d9aa2b;
-
-  font-size: 31px;
-  line-height: 1;
-
-  letter-spacing: 2px;
+  color: #d4af37;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 40px;
 }
 
-.ratingLine strong {
-  color: #0b0b0b;
-
-  font-size: 31px;
-  line-height: 1;
-
-  font-weight: 800;
-}
-
-.trusted {
-  margin-top: 9px;
-
+.ratingScore {
+  margin-left: 6px;
+  font-size: 40px;
+  line-height: 40px;
   color: #111111;
-
-  font-size: 17px;
-  line-height: 1;
-
-  font-weight: 650;
 }
 
-.trusted span {
-  color: #ef392e;
-
-  font-weight: 800;
+.ratingText {
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 40px;
+  color: #111111;
 }
 
-/*
-CALL
-*/
+.ratingText span {
+  color: #e32725;
+}
 
-.actions {
+.primaryCta {
+  margin-top: 10px;
   display: flex;
   align-items: center;
-
-  gap: 14px;
-
-  margin-top: 31px;
+  gap: 10px;
+  width: 350px;
+  height: 61px;
 }
 
 .callButton {
-  width: 125px;
-  height: 34px;
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  background: #ef392e;
+  width: 156px;
+  height: 41px;
+  background: #e32725;
   color: #ffffff;
-
-  border-radius: 10px;
-
-  font-size: 15px;
-  line-height: 1;
-
-  font-weight: 800;
-}
-
-.phone {
-  color: #111111;
-
+  border-radius: 12px;
   font-size: 20px;
-  line-height: 1;
-
-  font-weight: 800;
+  font-weight: 700;
+  line-height: 100px;
+  text-transform: uppercase;
 }
 
-/*
----------------- TRUCK ----------------
+.phoneNumber {
+  font-size: 24px;
+  line-height: 10px;
+  font-weight: 700;
+  color: #111111;
+}
 
-Measured from Figma:
-x ≈ 620
-y ≈ 205
-visible size ≈ 705 × 460
-*/
+.heroVisual {
+  position: relative;
+  width: 730px;
+  height: 620px;
+}
 
-.heroTruck {
+.boxTruck {
   position: absolute;
-
-  left: 620px;
-  top: 105px;
-
-  width: 705px;
-  height: auto;
-
-  object-fit: contain;
+  left: 0;
+  top: 67px;
+  width: 730px;
+  height: 486px;
+  object-fit: cover;
+  object-position: center;
 }
 
-/*
-==================================================
-WHY FANEX
-==================================================
-*/
+.mediaStrip {
+  position: absolute;
+  left: 98px;
+  top: 1713px;
+  width: 1241px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px;
+}
 
-.why {
+.logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.googleLogo {
+  width: 146px;
+  height: 60px;
+}
+
+.yelpLogo {
+  width: 157px;
+  height: 60px;
+}
+
+.tiktokLogo {
+  width: 142px;
+  height: 80px;
+}
+
+.instagramLogo {
+  width: 107px;
+  height: 60px;
+}
+
+.logo img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.whySection {
+  position: absolute;
+  left: 0;
+  top: 748px;
+  width: 1440px;
+  height: 958px;
   background: #000000;
-  color: #ffffff;
-
-  padding: 25px 0 55px;
+  overflow: hidden;
 }
 
 .whyInner {
+  position: absolute;
+  left: 100px;
+  top: 0;
   width: 1240px;
-  margin: 0 auto;
+  height: 870px;
 }
 
-.whyTitle {
-  height: 155px;
-
+.whyHeader {
+  width: 1240px;
+  height: 180px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.3);
+}
 
-  gap: 32px;
+.whyWord,
+.whyQuestion {
+  font-size: 160px;
+  line-height: 160px;
+  letter-spacing: 32px;
+  white-space: nowrap;
+}
 
-  overflow: hidden;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 120px;
-  line-height: 1;
-
-  font-weight: 900;
-  letter-spacing: 6px;
-
-  color: #555555;
+.whyLogoWrap {
+  width: 685px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
 }
 
 .whyLogo {
-  width: 530px;
-  height: auto;
+  width: 685px;
+  height: 150px;
+  object-fit: cover;
+}
 
-  opacity: 0.65;
+.whyIntro {
+  width: 1240px;
+  height: 150px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .whyEyebrow {
-  margin: 6px 0 18px;
-
-  color: #ef392e;
-
-  font-size: 17px;
-  letter-spacing: 2px;
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  color: rgba(227, 39, 37, 0.8);
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
-.why h2 {
+.whyIntro h2 {
   margin: 0;
-
   font-size: 28px;
-  letter-spacing: 2px;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .whySubtitle {
-  margin: 12px 0 30px;
-
-  color: #b8b8b8;
-
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 2.4px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
 }
 
-.whyGrid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 12px;
+.benefitGrid {
+  position: absolute;
+  left: 0;
+  top: 330px;
+  width: 1240px;
+  height: 730px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
 }
 
-.whyCard {
-  min-height: 150px;
+.benefitCard {
+  width: 1240px;
+  height: 213px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+}
 
-  padding: 22px 24px;
+.cardSide {
+  width: 100px;
+  height: 193px;
+  background: #ffffff;
+  border-right: 3px solid #ee3725;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
 
-  display: grid;
+.cardNumber {
+  font-size: 50px;
+  line-height: 0px;
+  letter-spacing: 5px;
+  color: #ee3725;
+  font-weight: 400;
+}
 
-  grid-template-columns: 72px 1fr;
-
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
 
+.cardIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardIcon404 {
+  width: 77px;
+  height: 47px;
+  font-size: 44px;
+  line-height: 0px;
+  letter-spacing: 4.4px;
+  color: #111111;
+  justify-content: flex-start;
+}
+
+.cardText {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background: #ffffff;
   color: #111111;
 }
 
-.number {
-  align-self: start;
-
-  color: #ef392e;
-
-  font-size: 29px;
-  line-height: 1;
-
-  font-weight: 900;
-}
-
-.whyCard > div {
-  border-left: 2px solid #ef392e;
-
-  padding-left: 22px;
-}
-
-.whyCard h3 {
-  margin: 0 0 9px;
-
-  font-size: 19px;
-  line-height: 1.05;
-
-  font-weight: 900;
-}
-
-.whyCard p {
+.cardText h3 {
   margin: 0;
-
-  font-size: 13px;
-  line-height: 1.35;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 2.6px;
+  font-weight: 800;
+  color: #111111;
+  text-transform: uppercase;
 }
 
-.findWay {
-  margin-top: 20px;
+.cardText p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2.4px;
+  font-weight: 500;
+  color: #111111;
+}
 
-  text-align: center;
+.accentText {
+  color: #ee3725;
+}
 
-  font-size: 23px;
-  font-weight: 900;
+.dividerLine {
+  position: absolute;
+  left: 100px;
+  top: 870px;
+  width: 1240px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000000;
+  background: #000000;
+}
 
+.dividerArrow {
+  width: 400px;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dividerArrow img {
+  width: 400px;
+  height: 0;
+  object-fit: contain;
+}
+
+.dividerArrow.right {
+  transform: rotate(180deg);
+}
+
+.dividerText {
+  font-size: 50px;
+  line-height: 0px;
   letter-spacing: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-/*
-==================================================
-SMALLER SCREENS
-==================================================
-*/
+.gallerySection {
+  position: absolute;
+  left: 0;
+  top: 2283px;
+  width: 1440px;
+  height: 910px;
+  background: #ffffff;
+}
+
+.galleryGrid {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  width: 1240px;
+  height: 910px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.galleryRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1240px;
+  height: 220px;
+}
+
+.tile {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.w400 { width: 400px; }
+.w390 { width: 390px; }
+.w200 { width: 200px; }
+
+.servicesSection {
+  position: absolute;
+  left: 0;
+  top: 3232px;
+  width: 1440px;
+  height: 944px;
+  background: #000000;
+}
+
+.servicesInner {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  width: 1240px;
+  height: 944px;
+  background: #000000;
+  padding: 10px;
+}
+
+.servicesTitle {
+  font-size: 20px;
+  line-height: 0px;
+  letter-spacing: 2px;
+  color: #ee3725;
+  text-transform: uppercase;
+}
 
 @media (max-width: 1440px) {
-  .desktopPage {
-    width: 100%;
+  .desktopHome {
+    transform-origin: top left;
   }
 }
 
 @media (max-width: 1000px) {
-  .hero {
-    height: auto;
-    min-height: 900px;
-  }
-
-  .headerLogo {
-    left: 32px;
-  }
-
-  .quoteButton {
-    right: 32px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .heroCanvas {
-    height: 800px;
-  }
-
-  .heroCopy {
-    left: 32px;
-  }
-
-  .heroTruck {
-    left: 50%;
-    top: 410px;
-
-    width: 680px;
-
-    transform: translateX(-50%);
-  }
-
-  .whyInner {
-    width: calc(100% - 64px);
-  }
-
-  .whyGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 650px) {
-  .heroTitle {
-    font-size: 68px;
-  }
-
-  .heroTruck {
-    width: 520px;
-  }
-
-  .whyGrid {
-    grid-template-columns: 1fr;
+  .desktopHome {
+    width: 100%;
+    min-width: 1440px;
   }
 }
