@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   background: #000;
-  color: #fff;
+  color: #111;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,240 +18,417 @@ a {
   text-decoration: none;
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero {
-  min-height: 100vh;
-  background: #000;
-  overflow: hidden;
+  background: #fff;
+  min-height: 750px;
 }
 
 .header {
-  width: min(1240px, calc(100% - 48px));
-  margin: 0 auto;
+  width: 1240px;
+  max-width: calc(100% - 60px);
   height: 110px;
+  margin: 0 auto;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 220px 1fr 180px;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
 }
 
-.logoImage {
+.headerLogo {
   width: 190px;
   height: auto;
-  object-fit: contain;
 }
 
 .nav {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 38px;
+  gap: 48px;
 
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
+  font-size: 15px;
+  font-weight: 800;
 }
 
 .nav a {
-  opacity: 0.8;
   transition: 0.2s ease;
 }
 
 .nav a:hover {
-  opacity: 1;
-  color: #f52b22;
+  color: #ef372d;
 }
 
 .quoteButton {
-  background: #f52b22;
-  padding: 17px 26px;
+  justify-self: end;
 
-  font-size: 13px;
+  background: #ef372d;
+  color: #fff;
+
+  padding: 15px 28px;
+  border-radius: 12px;
+
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: 1px;
-
-  transition: 0.2s ease;
 }
 
-.quoteButton:hover {
-  transform: translateY(-2px);
-}
-
-.heroContent {
-  width: min(1240px, calc(100% - 48px));
+.heroInner {
+  width: 1240px;
+  max-width: calc(100% - 60px);
+  height: 640px;
   margin: 0 auto;
 
-  min-height: calc(100vh - 110px);
-
   display: grid;
-  grid-template-columns: 46% 54%;
+  grid-template-columns: 42% 58%;
   align-items: center;
-  position: relative;
 }
 
-.heroLeft {
-  position: relative;
-  z-index: 2;
-  padding-bottom: 60px;
+.heroText {
+  align-self: center;
+  padding-bottom: 40px;
 }
 
-.eyebrow {
-  color: #f52b22;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  margin: 0 0 24px;
-}
-
-h1 {
+.hero h1 {
   margin: 0;
 
-  font-size: clamp(72px, 8vw, 126px);
-  line-height: 0.82;
-  letter-spacing: -6px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 92px;
   font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: 1px;
+
+  color: #050505;
 }
 
-h1 span {
-  color: #f52b22;
+.hero h1 span {
+  color: #ef372d;
 }
 
-.heroDescription {
-  width: min(520px, 100%);
-  margin: 32px 0 0;
+.location {
+  margin: 10px 0 0;
 
-  color: #a6a6a6;
-  font-size: 18px;
-  line-height: 1.55;
+  color: #ef372d;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 800;
 }
 
-.ratingRow {
-  margin-top: 30px;
+.description {
+  margin: 10px 0 0;
 
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.rating {
+  margin-top: 20px;
+}
+
+.ratingTop {
   display: flex;
   align-items: center;
-  gap: 14px;
-
-  font-size: 14px;
-  color: #a6a6a6;
-}
-
-.ratingRow strong {
-  color: #fff;
+  gap: 18px;
 }
 
 .stars {
-  color: #f5b400;
+  color: #dba928;
+  font-size: 31px;
   letter-spacing: 2px;
+  line-height: 1;
 }
 
-.heroActions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: 34px;
+.score {
+  font-size: 31px;
+  font-weight: 900;
 }
 
-.callButton {
-  background: #f52b22;
-  padding: 17px 30px;
+.trusted {
+  margin-top: 8px;
 
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.phone {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
 }
 
-.heroRight {
-  position: relative;
-  height: 100%;
-  min-height: 720px;
+.trusted strong {
+  color: #ef372d;
 }
 
-.truckImage {
-  position: absolute;
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
-  width: 820px;
+  margin-top: 31px;
+}
+
+.callButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 134px;
+  height: 44px;
+
+  background: #ef372d;
+  color: #fff;
+
+  border-radius: 11px;
+
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.phone {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.heroTruck {
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.truck {
+  width: 720px;
+  max-width: none;
   height: auto;
 
-  right: -110px;
-  bottom: 0;
-
-  object-fit: contain;
-
-  filter: drop-shadow(0 35px 50px rgba(0, 0, 0, 0.65));
+  transform: translate(30px, 20px);
 }
 
+/* =========================
+   WHY FANEX
+========================= */
+
+.why {
+  background: #000;
+  color: #fff;
+
+  padding: 25px 0 55px;
+}
+
+.whyInner {
+  width: 1240px;
+  max-width: calc(100% - 60px);
+  margin: 0 auto;
+}
+
+.whyTitle {
+  height: 155px;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  overflow: hidden;
+
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: 6px;
+
+  color: #555;
+}
+
+.whyLogo {
+  width: 530px;
+  height: auto;
+  opacity: 0.65;
+}
+
+.whyEyebrow {
+  margin: 6px 0 18px;
+
+  color: #ef372d;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.why h2 {
+  margin: 0;
+
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.whySubtitle {
+  margin: 12px 0 30px;
+
+  color: #b8b8b8;
+
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.whyCard {
+  min-height: 150px;
+
+  background: #fff;
+  color: #111;
+
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+
+  padding: 22px 24px;
+
+  border-radius: 2px;
+}
+
+.number {
+  align-self: start;
+
+  color: #ef372d;
+  font-family: Impact, "Arial Narrow", sans-serif;
+
+  font-size: 29px;
+  line-height: 1;
+}
+
+.whyCard > div {
+  border-left: 2px solid #ef372d;
+  padding-left: 22px;
+}
+
+.whyCard h3 {
+  margin: 0 0 9px;
+
+  font-size: 19px;
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.whyCard p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.findWay {
+  text-align: center;
+
+  margin-top: 20px;
+
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 1000px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
   .nav {
     display: none;
   }
 
-  .heroContent {
+  .heroInner {
+    height: auto;
     grid-template-columns: 1fr;
     padding-top: 40px;
   }
 
-  .heroRight {
+  .heroTruck {
     min-height: 450px;
+    justify-content: center;
   }
 
-  .truckImage {
+  .truck {
     width: 700px;
-    right: -120px;
+    transform: none;
   }
 
-  h1 {
-    font-size: clamp(70px, 15vw, 110px);
+  .whyGrid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 640px) {
-  .header {
-    width: calc(100% - 32px);
-    height: 90px;
+@media (max-width: 650px) {
+  .header,
+  .heroInner,
+  .whyInner {
+    max-width: calc(100% - 32px);
   }
 
-  .logoImage {
+  .header {
+    height: 85px;
+  }
+
+  .headerLogo {
     width: 145px;
   }
 
   .quoteButton {
-    padding: 13px 16px;
+    padding: 12px 16px;
     font-size: 11px;
   }
 
-  .heroContent {
-    width: calc(100% - 32px);
+  .hero h1 {
+    font-size: 68px;
   }
 
-  h1 {
-    letter-spacing: -3px;
+  .location {
+    font-size: 14px;
   }
 
-  .heroDescription {
-    font-size: 16px;
+  .description {
+    font-size: 15px;
   }
 
-  .ratingRow {
-    flex-wrap: wrap;
+  .stars {
+    font-size: 23px;
   }
 
-  .heroActions {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 18px;
+  .score {
+    font-size: 25px;
   }
 
-  .heroRight {
-    min-height: 360px;
+  .trusted {
+    font-size: 14px;
   }
 
-  .truckImage {
-    width: 540px;
-    right: -140px;
+  .phone {
+    font-size: 17px;
+  }
+
+  .heroTruck {
+    min-height: 330px;
+  }
+
+  .truck {
+    width: 520px;
+  }
+
+  .whyTitle {
+    height: 100px;
+    gap: 12px;
+    font-size: 65px;
+  }
+
+  .whyLogo {
+    width: 240px;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr;
   }
 }
