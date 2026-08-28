@@ -1,11 +1,18 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main>
       <section className="hero">
         <header className="header">
-          <div className="logo">
-            FAN<span>EX</span>
-          </div>
+          <Image
+            src="/fanex-logo.png"
+            alt="FANEX Moving"
+            width={220}
+            height={70}
+            className="logoImage"
+            priority
+          />
 
           <nav className="nav">
             <a href="#services">SERVICES</a>
@@ -33,11 +40,11 @@ export default function Home() {
 
             <p className="heroDescription">
               Professional moving services built around your move.
-              Clear pricing, real people and a team that finds a way.
+              Clear pricing. Real people. Solutions that work.
             </p>
 
-            <div className="rating">
-              <span className="stars">★★★★★</span>
+            <div className="ratingRow">
+              <div className="stars">★★★★★</div>
               <strong>4.9/5</strong>
               <span>Trusted by 250+ customers</span>
             </div>
@@ -54,9 +61,14 @@ export default function Home() {
           </div>
 
           <div className="heroRight">
-            <div className="truckPlaceholder">
-              TRUCK IMAGE
-            </div>
+            <Image
+              src="/truck-red.png"
+              alt="FANEX Moving truck"
+              width={900}
+              height={650}
+              className="truckImage"
+              priority
+            />
           </div>
         </div>
       </section>

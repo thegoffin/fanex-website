@@ -1,26 +1,257 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: #000;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.header {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logoImage {
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.nav a {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 1;
+  color: #f52b22;
+}
+
+.quoteButton {
+  background: #f52b22;
+  padding: 17px 26px;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transition: 0.2s ease;
+}
+
+.quoteButton:hover {
+  transform: translateY(-2px);
+}
+
+.heroContent {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+
+  min-height: calc(100vh - 110px);
+
+  display: grid;
+  grid-template-columns: 46% 54%;
+  align-items: center;
+  position: relative;
+}
+
+.heroLeft {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px;
+}
+
+.eyebrow {
+  color: #f52b22;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 0 0 24px;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: clamp(72px, 8vw, 126px);
+  line-height: 0.82;
+  letter-spacing: -6px;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #f52b22;
+}
+
+.heroDescription {
+  width: min(520px, 100%);
+  margin: 32px 0 0;
+
+  color: #a6a6a6;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.ratingRow {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-size: 14px;
+  color: #a6a6a6;
+}
+
+.ratingRow strong {
+  color: #fff;
+}
+
+.stars {
+  color: #f5b400;
+  letter-spacing: 2px;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.callButton {
+  background: #f52b22;
+  padding: 17px 30px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.phone {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.heroRight {
+  position: relative;
+  height: 100%;
+  min-height: 720px;
+}
+
+.truckImage {
+  position: absolute;
+
+  width: 820px;
+  height: auto;
+
+  right: -110px;
+  bottom: 0;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 35px 50px rgba(0, 0, 0, 0.65));
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+
+  .heroRight {
+    min-height: 450px;
+  }
+
+  .truckImage {
+    width: 700px;
+    right: -120px;
+  }
+
+  h1 {
+    font-size: clamp(70px, 15vw, 110px);
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    width: calc(100% - 32px);
+    height: 90px;
+  }
+
+  .logoImage {
+    width: 145px;
+  }
+
+  .quoteButton {
+    padding: 13px 16px;
+    font-size: 11px;
+  }
+
+  .heroContent {
+    width: calc(100% - 32px);
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+
+  .heroDescription {
+    font-size: 16px;
+  }
+
+  .ratingRow {
+    flex-wrap: wrap;
+  }
+
+  .heroActions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .heroRight {
+    min-height: 360px;
+  }
+
+  .truckImage {
+    width: 540px;
+    right: -140px;
+  }
 }
