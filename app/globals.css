@@ -2,15 +2,18 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   background: #000;
-  color: #111;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -18,295 +21,321 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   HERO
-========================= */
+/*
+==================================================
+DESKTOP FIGMA FRAME
+==================================================
+*/
 
-/* =========================
-   HEADER + HERO — FIGMA 1440
-========================= */
+.desktopPage {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*
+==================================================
+HERO
+==================================================
+*/
 
 .hero {
+  position: relative;
+
+  width: 100%;
   height: 750px;
+
   background: #ffffff;
   color: #080808;
+
   overflow: hidden;
 }
 
-.header {
-  width: 1240px;
-  height: 100px;
-  margin: 0 auto;
+/*
+---------------- HEADER ----------------
+*/
 
-  display: grid;
-  grid-template-columns: 250px 1fr 190px;
-  align-items: center;
+.header {
+  position: relative;
+
+  width: 100%;
+  height: 100px;
 }
 
+/* Figma: ~x 100 */
+
 .headerLogo {
-  display: block;
-  width: 200px;
+  position: absolute;
+
+  left: 100px;
+  top: 21px;
+
+  width: 195px;
   height: auto;
 }
 
+/* centered navigation */
+
 .nav {
+  position: absolute;
+
+  left: 442px;
+  top: 34px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 45px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+
   font-size: 15px;
   line-height: 1;
-  font-weight: 800;
+  font-weight: 700;
+
+  color: #0a0a0a;
 }
 
 .nav a {
-  color: #0b0b0b;
+  transition: opacity 0.15s ease;
 }
 
-.quoteButton {
-  justify-self: end;
+.nav a:hover {
+  opacity: 0.55;
+}
 
-  min-width: 184px;
+/* Figma: ~x 1135 */
+
+.quoteButton {
+  position: absolute;
+
+  right: 100px;
+  top: 22px;
+
+  width: 184px;
   height: 42px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: #ef382e;
+  background: #ef392e;
   color: #ffffff;
 
-  border-radius: 12px;
+  border-radius: 11px;
 
   font-size: 14px;
   line-height: 1;
   font-weight: 800;
 }
 
-.heroInner {
+/*
+---------------- HERO CANVAS ----------------
+*/
+
+.heroCanvas {
   position: relative;
 
-  width: 1240px;
+  width: 100%;
   height: 650px;
-  margin: 0 auto;
 }
 
-/* LEFT SIDE */
+/*
+Figma:
+x ≈ 100
+y ≈ 144 from top of frame
+*/
 
-.heroText {
+.heroCopy {
   position: absolute;
+
+  left: 100px;
+  top: 44px;
+
+  width: 470px;
+
   z-index: 2;
-
-  left: 0;
-  top: 88px;
-
-  width: 490px;
 }
+
+/*
+TITLE
+*/
 
 .heroTitle {
   margin: 0;
 
-  font-family: Impact, "Arial Narrow", sans-serif;
-  font-size: 88px;
-  line-height: 0.89;
-  font-weight: 900;
-  letter-spacing: 0;
-
   color: #050505;
+
+  font-size: 88px;
+  line-height: 0.91;
+  font-weight: 400;
+
+  letter-spacing: -1px;
 }
 
 .heroTitle span {
-  color: #ef382e;
+  color: #ef392e;
 }
 
+.heroTitle b {
+  color: #050505;
+  font-weight: inherit;
+}
+
+/*
+LOCATION
+*/
+
 .location {
-  margin: 8px 0 0;
+  margin-top: 8px;
+
+  color: #ef392e;
 
   font-size: 17px;
   line-height: 1;
   font-weight: 800;
-
-  color: #ef382e;
 }
+
+/*
+DESCRIPTION
+*/
 
 .description {
   margin: 11px 0 0;
 
-  font-size: 17px;
-  line-height: 1.18;
-  font-weight: 700;
-
   color: #111111;
+
+  font-size: 17px;
+  line-height: 1.22;
+  font-weight: 650;
 }
 
-.rating {
-  margin-top: 20px;
-}
+/*
+RATING
+*/
 
-.ratingTop {
+.ratingLine {
   display: flex;
   align-items: center;
-  gap: 18px;
+
+  gap: 19px;
+
+  margin-top: 21px;
 }
 
 .stars {
-  display: block;
-
-  color: #daa92c;
+  color: #d9aa2b;
 
   font-size: 31px;
   line-height: 1;
+
   letter-spacing: 2px;
 }
 
-.score {
-  color: #111111;
+.ratingLine strong {
+  color: #0b0b0b;
 
   font-size: 31px;
   line-height: 1;
-  font-weight: 900;
+
+  font-weight: 800;
 }
 
 .trusted {
-  margin: 9px 0 0;
+  margin-top: 9px;
 
   color: #111111;
 
   font-size: 17px;
   line-height: 1;
-  font-weight: 700;
+
+  font-weight: 650;
 }
 
 .trusted span {
-  color: #ef382e;
+  color: #ef392e;
+
+  font-weight: 800;
 }
+
+/*
+CALL
+*/
 
 .actions {
   display: flex;
   align-items: center;
-  gap: 15px;
 
-  margin-top: 29px;
+  gap: 14px;
+
+  margin-top: 31px;
 }
 
 .callButton {
-  width: 135px;
-  height: 42px;
+  width: 125px;
+  height: 34px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #ef382e;
+  background: #ef392e;
   color: #ffffff;
 
-  border-radius: 11px;
+  border-radius: 10px;
 
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
-  font-weight: 900;
+
+  font-weight: 800;
 }
 
 .phone {
   color: #111111;
 
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1;
-  font-weight: 900;
+
+  font-weight: 800;
 }
 
-/* TRUCK */
+/*
+---------------- TRUCK ----------------
+
+Measured from Figma:
+x ≈ 620
+y ≈ 205
+visible size ≈ 705 × 460
+*/
 
 .heroTruck {
   position: absolute;
 
-  left: 500px;
-  top: 106px;
+  left: 620px;
+  top: 105px;
 
-  width: 740px;
-  height: 470px;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.truck {
-  display: block;
-
-  width: 720px;
-  max-width: none;
+  width: 705px;
   height: auto;
+
+  object-fit: contain;
 }
 
-/* =========================
-   TABLET / MOBILE
-========================= */
-
-@media (max-width: 1279px) {
-  .header,
-  .heroInner {
-    width: calc(100% - 64px);
-  }
-
-  .truck {
-    width: 650px;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero {
-    height: auto;
-  }
-
-  .header {
-    grid-template-columns: 1fr auto;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .heroInner {
-    height: auto;
-    padding: 65px 0 0;
-  }
-
-  .heroText {
-    position: relative;
-    left: auto;
-    top: auto;
-  }
-
-  .heroTruck {
-    position: relative;
-    left: auto;
-    top: auto;
-
-    width: 100%;
-    height: 430px;
-
-    justify-content: center;
-    margin-top: 30px;
-  }
-}
-
-/* =========================
-   WHY FANEX
-========================= */
+/*
+==================================================
+WHY FANEX
+==================================================
+*/
 
 .why {
-  background: #000;
-  color: #fff;
+  width: 100%;
+
+  background: #000000;
+  color: #ffffff;
 
   padding: 25px 0 55px;
 }
 
 .whyInner {
   width: 1240px;
-  max-width: calc(100% - 60px);
   margin: 0 auto;
 }
 
@@ -315,28 +344,34 @@ a {
 
   display: flex;
   align-items: center;
+
   gap: 32px;
 
   overflow: hidden;
 
-  font-family: Impact, "Arial Narrow", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+
   font-size: 120px;
   line-height: 1;
+
+  font-weight: 900;
   letter-spacing: 6px;
 
-  color: #555;
+  color: #555555;
 }
 
 .whyLogo {
   width: 530px;
   height: auto;
+
   opacity: 0.65;
 }
 
 .whyEyebrow {
   margin: 6px 0 18px;
 
-  color: #ef372d;
+  color: #ef392e;
+
   font-size: 17px;
   letter-spacing: 2px;
 }
@@ -359,37 +394,41 @@ a {
 
 .whyGrid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 12px;
 }
 
 .whyCard {
   min-height: 150px;
 
-  background: #fff;
-  color: #111;
-
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  align-items: center;
-
   padding: 22px 24px;
 
-  border-radius: 2px;
+  display: grid;
+
+  grid-template-columns: 72px 1fr;
+
+  align-items: center;
+
+  background: #ffffff;
+  color: #111111;
 }
 
 .number {
   align-self: start;
 
-  color: #ef372d;
-  font-family: Impact, "Arial Narrow", sans-serif;
+  color: #ef392e;
 
   font-size: 29px;
   line-height: 1;
+
+  font-weight: 900;
 }
 
 .whyCard > div {
-  border-left: 2px solid #ef372d;
+  border-left: 2px solid #ef392e;
+
   padding-left: 22px;
 }
 
@@ -398,6 +437,7 @@ a {
 
   font-size: 19px;
   line-height: 1.05;
+
   font-weight: 900;
 }
 
@@ -409,113 +449,79 @@ a {
 }
 
 .findWay {
-  text-align: center;
-
   margin-top: 20px;
+
+  text-align: center;
 
   font-size: 23px;
   font-weight: 900;
+
   letter-spacing: 5px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*
+==================================================
+SMALLER SCREENS
+==================================================
+*/
+
+@media (max-width: 1440px) {
+  .desktopPage {
+    width: 100%;
+  }
+}
 
 @media (max-width: 1000px) {
-  .header {
-    grid-template-columns: 1fr auto;
+  .hero {
+    height: auto;
+    min-height: 900px;
+  }
+
+  .headerLogo {
+    left: 32px;
+  }
+
+  .quoteButton {
+    right: 32px;
   }
 
   .nav {
     display: none;
   }
 
-  .heroInner {
-    height: auto;
-    grid-template-columns: 1fr;
-    padding-top: 40px;
+  .heroCanvas {
+    height: 800px;
+  }
+
+  .heroCopy {
+    left: 32px;
   }
 
   .heroTruck {
-    min-height: 450px;
-    justify-content: center;
+    left: 50%;
+    top: 410px;
+
+    width: 680px;
+
+    transform: translateX(-50%);
   }
 
-  .truck {
-    width: 700px;
-    transform: none;
+  .whyInner {
+    width: calc(100% - 64px);
   }
 
   .whyGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 650px) {
-  .header,
-  .heroInner,
-  .whyInner {
-    max-width: calc(100% - 32px);
-  }
-
-  .header {
-    height: 85px;
-  }
-
-  .headerLogo {
-    width: 145px;
-  }
-
-  .quoteButton {
-    padding: 12px 16px;
-    font-size: 11px;
-  }
-
-  .hero h1 {
+  .heroTitle {
     font-size: 68px;
   }
 
-  .location {
-    font-size: 14px;
-  }
-
-  .description {
-    font-size: 15px;
-  }
-
-  .stars {
-    font-size: 23px;
-  }
-
-  .score {
-    font-size: 25px;
-  }
-
-  .trusted {
-    font-size: 14px;
-  }
-
-  .phone {
-    font-size: 17px;
-  }
-
   .heroTruck {
-    min-height: 330px;
-  }
-
-  .truck {
     width: 520px;
-  }
-
-  .whyTitle {
-    height: 100px;
-    gap: 12px;
-    font-size: 65px;
-  }
-
-  .whyLogo {
-    width: 240px;
   }
 
   .whyGrid {
